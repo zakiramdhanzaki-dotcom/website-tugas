@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulir Pendaftaran</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f7fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .kotakformulir {
+      border: 2px solid green;
+      width: 420px;
+      padding: 15px;
+      background-color: white;
+      position: relative;
+      border-radius: 6px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .judul {
+      position: absolute;
+      top: -15px;
+      left: 10px;
+      background: orange;
+      color: white;
+      font-weight: bold;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input[type="text"], select {
+      width: 95%;
+      padding: 6px;
+      margin-top: 4px;
+      border: 1px solid green;
+      border-radius: 4px;
+    }
+
+    .pilihanRadio {
+      margin-top: 6px;
+    }
+
+    .pilihanRadio input[type="radio"] {
+      accent-color: teal; 
+      margin-right: 4px;
+    }
+
+    .nilai input[type="text"] {
+      width: 120px;
+      display: inline-block;
+      margin-right: 6px;
+      margin-top: 6px;
+    }
+
+    .persetujuan {
+      margin-top: 10px;
+    }
+
+    .persetujuan input[type="checkbox"] {
+      accent-color: teal;
+    }
+
+    .tombol {
+      margin-top: 15px;
+    }
+
+    .tombol input[type="submit"], .tombol input[type="reset"] {
+      padding: 8px 20px;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      color: white;
+      cursor: pointer;
+      margin-right: 8px;
+    }
+
+    .tombol input[type="submit"] {
+      background: linear-gradient(to right, #007bff, #0047b3);
+    }
+
+    .tombol input[type="reset"] {
+      background: linear-gradient(to right, #00c851, #007e33);
+    }
+
+    .tombol input[type="submit"]:hover,
+    .tombol input[type="reset"]:hover {
+      opacity: 0.85;
+    }
+  </style>
+</head>
+<body>
+  <div class="kotakformulir">
+    <div class="judul">Universitas Patilasan Ikip</div>
+
+    <label>Nama</label>
+    <input type="text" name="nama">
+
+    <label>Asal Sekolah</label>
+    <input type="text" name="asalSekolah">
+
+    <label>Jenis Kelamin</label>
+    <div class="pilihanRadio">
+      <input type="radio" name="gender" value="pria"> Pria<br>
+      <input type="radio" name="gender" value="wanita"> Wanita
+    </div>
+
+    <label>Agama</label>
+    <select name="agama">
+      <option>--PILIH--</option>
+      <option>Islam</option>
+      <option>Kristen</option>
+      <option>Katolik</option>
+      <option>Hindu</option>
+      <option>Buddha</option>
+      <option>Konghucu</option>
+    </select>
+
+    <label>Nilai</label>
+    <div class="nilai">
+      <input type="text" placeholder="Matematika">
+      <input type="text" placeholder="Bahasa Indonesia">
+      <input type="text" placeholder="Bahasa Inggris">
+    </div>
+
+    <label>Fakultas Pilihan</label>
+    <select name="fakultas">
+      <option>--PILIH--</option>
+      <option>Fakultas Ilmu Pendidikan</option>
+      <option>Fakultas Pendidikan Bahasa dan Seni</option>
+      <option>Fakultas Pendidikan Olahraga dan Kesehatan</option>
+      <option>Fakultas Pendidikan Teknik dan Kejuruan</option>
+      <option>Fakultas Pendidikan Matematika dan Ilmu Pengetahuan Alam</option>
+      <option>Fakultas Pendidikan Ilmu Pengetahuan Sosial</option>
+       <option>Fakultas Pendidikan Ekonomi dan Bisnis</option>
+    </select>
+
+    <div class="persetujuan">
+      <p>Anda menyetujui persyaratan yang berlaku</p>
+      <input type="checkbox"> Setuju
+    </div>
+
+    <div class="tombol">
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+    </div>
+  </div>
+</body>
+</html>
